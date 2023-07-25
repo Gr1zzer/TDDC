@@ -1,5 +1,5 @@
 user = {
     name: 'John Smith',
     email: 'js@somePretendEmail.com',
-    posts: [Array of Post IDs]
+    posts: ["this","is","complicated","for","my","tiny brain"]
 }
