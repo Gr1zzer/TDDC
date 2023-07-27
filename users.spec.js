@@ -9,11 +9,17 @@ user = {
 //     });
 // });
 describe('Second group of tests', () => {
-    function getNewId() {
-        return Math.random()
-    }
     function getRandomId() {
         return Math.floor(Math.random()); // convert to integer
+    }
+    test('returns an integer', () => {
+       const id = getRandomId();
+       expect(id).toBe(Math.floor(id))
+    });
+});
+describe('Third group of tests', () => {
+    function getNewId() {
+        return Math.random()
     }
     test('returns a random number', () => {
         jest.spyOn(Math, 'floor'); // <--------------------changed
@@ -26,13 +32,8 @@ describe('Second group of tests', () => {
         expect(Math.floor).toHaveBeenCalledWith(0.75); //<-changed
         global.Math = globalMath;
     });
+    
 })
-describe('Third group of tests', () => {
-    test('returns an integer', () => {
-       const id = getRandomId();
-       expect(id).toBe(true)
-    });
-});
 describe('Another group of tests', () => {
     // ...more tests here
 });
